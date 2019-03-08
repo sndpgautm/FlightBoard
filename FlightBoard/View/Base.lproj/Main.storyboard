@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AHI-x9-Pe1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Airports-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AirportViewController" customModule="FlightBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Pf-a0-dMd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirportInfoCell" rowHeight="60" id="hpi-Pw-7fK" customClass="AirportInfoCell" customModule="FlightBoard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hpi-Pw-7fK" id="TXE-RE-ixh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IATA Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpH-Ox-COd">
+                                                    <rect key="frame" x="10" y="2.5" width="120" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="d0i-58-wSR"/>
+                                                        <constraint firstAttribute="height" constant="25" id="kg2-w1-4oT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TED-5B-qRJ">
+                                                    <rect key="frame" x="135" y="2.5" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="626-fS-B5C"/>
+                                                        <constraint firstAttribute="width" constant="200" id="n8J-HH-XDW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVF-AR-tTa">
+                                                    <rect key="frame" x="10" y="32" width="120" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="1nP-Lj-Tof"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Nq4-mi-t6O"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-S8-pem">
+                                                    <rect key="frame" x="135" y="32" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="fWJ-K8-xKv"/>
+                                                        <constraint firstAttribute="height" constant="25" id="kmZ-sG-a9D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bVF-AR-tTa" firstAttribute="leading" secondItem="TXE-RE-ixh" secondAttribute="leading" constant="10" id="EVy-mO-O2S"/>
+                                                <constraint firstItem="TpH-Ox-COd" firstAttribute="top" secondItem="TXE-RE-ixh" secondAttribute="top" constant="2.5" id="JnB-ZR-GCg"/>
+                                                <constraint firstItem="TED-5B-qRJ" firstAttribute="top" secondItem="TXE-RE-ixh" secondAttribute="top" constant="2.5" id="Mxy-Hd-Mgp"/>
+                                                <constraint firstItem="Ang-S8-pem" firstAttribute="leading" secondItem="bVF-AR-tTa" secondAttribute="trailing" constant="5" id="Pw3-8V-dfK"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ang-S8-pem" secondAttribute="bottom" constant="2.5" id="eQ1-bC-p48"/>
+                                                <constraint firstAttribute="bottom" secondItem="bVF-AR-tTa" secondAttribute="bottom" constant="2.5" id="iO7-wY-3k2"/>
+                                                <constraint firstItem="TpH-Ox-COd" firstAttribute="leading" secondItem="TXE-RE-ixh" secondAttribute="leading" constant="10" id="prw-eD-ttt"/>
+                                                <constraint firstItem="TED-5B-qRJ" firstAttribute="leading" secondItem="TpH-Ox-COd" secondAttribute="trailing" constant="5" id="scR-da-shm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="airportNameLabel" destination="TED-5B-qRJ" id="vK0-aW-Wnf"/>
+                                            <outlet property="cityNameLabel" destination="bVF-AR-tTa" id="k2c-mC-Rjf"/>
+                                            <outlet property="countryCodeLabel" destination="Ang-S8-pem" id="dmI-C2-KVR"/>
+                                            <outlet property="iataLabel" destination="TpH-Ox-COd" id="6tX-eb-kWb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="49S-e6-cXQ"/>
+                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Y9r-hR-lA9"/>
+                            <constraint firstAttribute="bottom" secondItem="3Pf-a0-dMd" secondAttribute="bottom" id="f5d-kt-5zS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Pf-a0-dMd" secondAttribute="trailing" id="mqr-Wn-4KO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Airports" id="Knc-0r-8UM"/>
+                    <connections>
+                        <outlet property="tableView" destination="3Pf-a0-dMd" id="Ox4-D3-tyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="119.1904047976012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rKe-RY-RIE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AHI-x9-Pe1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TaZ-iR-1MB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8qK-tT-JOD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEF-7h-nS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="120"/>
+        </scene>
+    </scenes>
+</document>
