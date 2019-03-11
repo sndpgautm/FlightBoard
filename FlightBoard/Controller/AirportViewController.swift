@@ -44,6 +44,9 @@ class AirportViewController: UIViewController, NSFetchedResultsControllerDelegat
         //Setup NavBar
         navigationController?.navigationBar.prefersLargeTitles = true
         //navigationItem.rightBarButtonItem = editButtonItem
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = .red
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Airports"
