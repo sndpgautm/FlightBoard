@@ -4,15 +4,15 @@ A simple flight board application for showing arrival and departues information 
 
 Airports View
 <p align="center">
-  <img "https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Airports%20Screen.png" width="350"/>
+  <img src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Airports%20Screen.png" width="350"/>
 </p>
 
 Arrivals View
 <p align="center">
-  <img "https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Arrivals%20Screen.png" width="350"/>
+  <img src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Arrivals%20Screen.png" width="350"/>
 </p>
 
 Departures View
 <p align="center">
-  <img "https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Departures%20Screen.png" width="350"/>
+  <img src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Departures%20Screen.png" width="350"/>
 </p>
