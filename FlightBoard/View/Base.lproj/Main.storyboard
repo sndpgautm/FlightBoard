@@ -40,10 +40,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TED-5B-qRJ">
-                                                    <rect key="frame" x="135" y="2.5" width="200" height="25"/>
+                                                    <rect key="frame" x="135" y="2.5" width="225" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="626-fS-B5C"/>
-                                                        <constraint firstAttribute="width" constant="200" id="n8J-HH-XDW"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,9 +59,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ang-S8-pem">
-                                                    <rect key="frame" x="135" y="32" width="200" height="25"/>
+                                                    <rect key="frame" x="135" y="32" width="225" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="fWJ-K8-xKv"/>
                                                         <constraint firstAttribute="height" constant="25" id="kmZ-sG-a9D"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
@@ -71,6 +69,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TED-5B-qRJ" secondAttribute="trailing" constant="15" id="7Yy-aH-0e8"/>
                                                 <constraint firstItem="bVF-AR-tTa" firstAttribute="leading" secondItem="TXE-RE-ixh" secondAttribute="leading" constant="10" id="EVy-mO-O2S"/>
                                                 <constraint firstItem="TpH-Ox-COd" firstAttribute="top" secondItem="TXE-RE-ixh" secondAttribute="top" constant="2.5" id="JnB-ZR-GCg"/>
                                                 <constraint firstItem="TED-5B-qRJ" firstAttribute="top" secondItem="TXE-RE-ixh" secondAttribute="top" constant="2.5" id="Mxy-Hd-Mgp"/>
@@ -79,6 +78,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="bVF-AR-tTa" secondAttribute="bottom" constant="2.5" id="iO7-wY-3k2"/>
                                                 <constraint firstItem="TpH-Ox-COd" firstAttribute="leading" secondItem="TXE-RE-ixh" secondAttribute="leading" constant="10" id="prw-eD-ttt"/>
                                                 <constraint firstItem="TED-5B-qRJ" firstAttribute="leading" secondItem="TpH-Ox-COd" secondAttribute="trailing" constant="5" id="scR-da-shm"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ang-S8-pem" secondAttribute="trailing" constant="15" id="wnb-wQ-DFO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -92,12 +92,12 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="49S-e6-cXQ"/>
-                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Y9r-hR-lA9"/>
-                            <constraint firstAttribute="bottom" secondItem="3Pf-a0-dMd" secondAttribute="bottom" id="f5d-kt-5zS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Pf-a0-dMd" secondAttribute="trailing" id="mqr-Wn-4KO"/>
+                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2VO-yE-D6W"/>
+                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z80-Ft-31l"/>
+                            <constraint firstAttribute="bottom" secondItem="3Pf-a0-dMd" secondAttribute="bottom" id="snC-Gs-ZqL"/>
+                            <constraint firstItem="3Pf-a0-dMd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vBf-pb-zZz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1783" y="1021"/>
+            <point key="canvasLocation" x="-1783.2" y="1020.5397301349326"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RCg-SN-CJh">
@@ -136,14 +136,94 @@
                     <view key="view" contentMode="scaleToFill" id="cmX-ys-NN3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B0Q-fF-yx3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArrivalFlightInfoCell" rowHeight="50" id="7Vi-A1-Lb1" customClass="ArrivalFlightInfoCell" customModule="FlightBoard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Vi-A1-Lb1" id="Wxo-eI-9Ey">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARR▽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJf-eH-cYG">
+                                                    <rect key="frame" x="5" y="20" width="58" height="9.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l01-6m-Rey">
+                                                    <rect key="frame" x="289" y="20" width="81" height="9.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="U7K-d0-3g5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mC-jE-nJT">
+                                                    <rect key="frame" x="60" y="17" width="122" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTP-4S-bjW">
+                                                    <rect key="frame" x="190" y="17" width="85" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="hI0-vo-7zo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l01-6m-Rey" firstAttribute="height" secondItem="tJf-eH-cYG" secondAttribute="height" id="0P9-XX-THZ"/>
+                                                <constraint firstItem="OTP-4S-bjW" firstAttribute="leading" secondItem="7mC-jE-nJT" secondAttribute="trailing" constant="8" id="25p-xc-ciz"/>
+                                                <constraint firstItem="OTP-4S-bjW" firstAttribute="firstBaseline" secondItem="tJf-eH-cYG" secondAttribute="firstBaseline" constant="-3" id="542-68-SBe"/>
+                                                <constraint firstItem="tJf-eH-cYG" firstAttribute="leading" secondItem="Wxo-eI-9Ey" secondAttribute="leading" constant="5" id="AQX-kO-Umv"/>
+                                                <constraint firstItem="7mC-jE-nJT" firstAttribute="leading" secondItem="tJf-eH-cYG" secondAttribute="trailing" constant="-3" id="BQG-EL-gnt"/>
+                                                <constraint firstItem="l01-6m-Rey" firstAttribute="leading" secondItem="OTP-4S-bjW" secondAttribute="trailing" constant="14" id="RzZ-cI-Z2d"/>
+                                                <constraint firstItem="7mC-jE-nJT" firstAttribute="height" secondItem="tJf-eH-cYG" secondAttribute="height" constant="5.5" id="WUE-OS-eqG"/>
+                                                <constraint firstItem="OTP-4S-bjW" firstAttribute="height" secondItem="tJf-eH-cYG" secondAttribute="height" constant="5.5" id="awD-F3-h5a"/>
+                                                <constraint firstItem="l01-6m-Rey" firstAttribute="firstBaseline" secondItem="tJf-eH-cYG" secondAttribute="firstBaseline" id="cGg-Wq-nH6"/>
+                                                <constraint firstAttribute="trailing" secondItem="l01-6m-Rey" secondAttribute="trailing" constant="5" id="dGc-Gp-Q73"/>
+                                                <constraint firstItem="tJf-eH-cYG" firstAttribute="top" secondItem="Wxo-eI-9Ey" secondAttribute="top" constant="20" symbolic="YES" id="hTh-t3-G9S"/>
+                                                <constraint firstAttribute="bottom" secondItem="tJf-eH-cYG" secondAttribute="bottom" constant="20" symbolic="YES" id="icY-Os-2y1"/>
+                                                <constraint firstItem="7mC-jE-nJT" firstAttribute="firstBaseline" secondItem="tJf-eH-cYG" secondAttribute="firstBaseline" constant="-3" id="mag-ch-1Iu"/>
+                                                <constraint firstItem="7mC-jE-nJT" firstAttribute="leading" secondItem="Wxo-eI-9Ey" secondAttribute="leadingMargin" constant="45" id="sAo-bq-Jdb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="7mC-jE-nJT" id="bNw-xK-JdQ"/>
+                                            <outlet property="flightNoLabel" destination="OTP-4S-bjW" id="69f-qP-LtM"/>
+                                            <outlet property="terminalLabel" destination="l01-6m-Rey" id="INR-GA-MfM"/>
+                                            <outlet property="timeLabel" destination="tJf-eH-cYG" id="qmP-l2-Z7W"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B0Q-fF-yx3" firstAttribute="top" secondItem="S2s-UZ-XEi" secondAttribute="top" id="2vm-sG-2Kc"/>
+                            <constraint firstItem="B0Q-fF-yx3" firstAttribute="leading" secondItem="S2s-UZ-XEi" secondAttribute="leading" id="Tb1-ob-Vrs"/>
+                            <constraint firstItem="S2s-UZ-XEi" firstAttribute="trailing" secondItem="B0Q-fF-yx3" secondAttribute="trailing" id="TzD-2u-pZf"/>
+                            <constraint firstAttribute="bottom" secondItem="B0Q-fF-yx3" secondAttribute="bottom" id="pg6-QM-nKp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S2s-UZ-XEi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Arrivals" id="6PY-1I-JiV"/>
+                    <connections>
+                        <outlet property="tableView" destination="B0Q-fF-yx3" id="tgE-Mj-xlg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1B-x1-9et" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="1021"/>
+            <point key="canvasLocation" x="-983.20000000000005" y="1020.5397301349326"/>
         </scene>
         <!--Airport-->
         <scene sceneID="rKe-RY-RIE">
@@ -190,14 +270,94 @@
                     <view key="view" contentMode="scaleToFill" id="H9m-Yf-Rn5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-Rr-L6N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DepartureFlightInfoCell" rowHeight="50" id="sET-o7-CAQ" customClass="DepartureFlightInfoCell" customModule="FlightBoard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sET-o7-CAQ" id="1ek-3d-jjR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEP△" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrg-JX-cxn">
+                                                    <rect key="frame" x="5" y="20" width="58" height="9.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMINAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR2-ER-Chi">
+                                                    <rect key="frame" x="289" y="20" width="81" height="9.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="HuU-b0-aeX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdi-QM-xtp">
+                                                    <rect key="frame" x="60" y="17" width="122" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-ME-oIl">
+                                                    <rect key="frame" x="190" y="17" width="85" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="KP4-P6-E30"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vcR-ME-oIl" firstAttribute="leading" secondItem="bdi-QM-xtp" secondAttribute="trailing" constant="8" id="14I-Ui-2nS"/>
+                                                <constraint firstItem="bdi-QM-xtp" firstAttribute="leading" secondItem="1ek-3d-jjR" secondAttribute="leadingMargin" constant="45" id="7EZ-5q-3FF"/>
+                                                <constraint firstAttribute="bottom" secondItem="wrg-JX-cxn" secondAttribute="bottom" constant="20" symbolic="YES" id="7G3-Oe-iOE"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZR2-ER-Chi" secondAttribute="trailing" constant="5" id="Boe-kS-gd1"/>
+                                                <constraint firstItem="ZR2-ER-Chi" firstAttribute="leading" secondItem="vcR-ME-oIl" secondAttribute="trailing" constant="14" id="FAl-o7-vjU"/>
+                                                <constraint firstItem="bdi-QM-xtp" firstAttribute="leading" secondItem="wrg-JX-cxn" secondAttribute="trailing" constant="-3" id="JBn-Uz-Oip"/>
+                                                <constraint firstItem="wrg-JX-cxn" firstAttribute="leading" secondItem="1ek-3d-jjR" secondAttribute="leading" constant="5" id="MES-YQ-UYa"/>
+                                                <constraint firstItem="ZR2-ER-Chi" firstAttribute="height" secondItem="wrg-JX-cxn" secondAttribute="height" id="Rai-gG-ofX"/>
+                                                <constraint firstItem="bdi-QM-xtp" firstAttribute="firstBaseline" secondItem="wrg-JX-cxn" secondAttribute="firstBaseline" constant="-3" id="ZpP-uc-Y8k"/>
+                                                <constraint firstItem="vcR-ME-oIl" firstAttribute="firstBaseline" secondItem="wrg-JX-cxn" secondAttribute="firstBaseline" constant="-3" id="gaA-uw-Ef1"/>
+                                                <constraint firstItem="bdi-QM-xtp" firstAttribute="height" secondItem="wrg-JX-cxn" secondAttribute="height" constant="5.5" id="uQU-2s-6zH"/>
+                                                <constraint firstItem="wrg-JX-cxn" firstAttribute="top" secondItem="1ek-3d-jjR" secondAttribute="top" constant="20" symbolic="YES" id="unH-ga-QN1"/>
+                                                <constraint firstItem="ZR2-ER-Chi" firstAttribute="firstBaseline" secondItem="wrg-JX-cxn" secondAttribute="firstBaseline" id="vvZ-rU-MA4"/>
+                                                <constraint firstItem="vcR-ME-oIl" firstAttribute="height" secondItem="wrg-JX-cxn" secondAttribute="height" constant="5.5" id="xH2-bc-sTk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dCityLabel" destination="bdi-QM-xtp" id="FhT-5W-ly8"/>
+                                            <outlet property="dFlightNoLabel" destination="vcR-ME-oIl" id="3ca-WJ-2GX"/>
+                                            <outlet property="dTerminalLabel" destination="ZR2-ER-Chi" id="GeQ-5M-jS4"/>
+                                            <outlet property="dTimeLabel" destination="wrg-JX-cxn" id="cht-Gb-9yP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qDQ-Rr-L6N" firstAttribute="trailing" secondItem="y1U-Dr-CSV" secondAttribute="trailing" id="G4p-VL-2pl"/>
+                            <constraint firstItem="qDQ-Rr-L6N" firstAttribute="top" secondItem="H9m-Yf-Rn5" secondAttribute="top" id="irS-49-Wg5"/>
+                            <constraint firstAttribute="bottom" secondItem="qDQ-Rr-L6N" secondAttribute="bottom" id="jcV-Ak-OQU"/>
+                            <constraint firstItem="qDQ-Rr-L6N" firstAttribute="leading" secondItem="y1U-Dr-CSV" secondAttribute="leading" id="qy4-Xf-Fi8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y1U-Dr-CSV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Departures" id="Yun-kb-vAb"/>
+                    <connections>
+                        <outlet property="tableView" destination="qDQ-Rr-L6N" id="doM-DD-UC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5N-2V-MTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="1021"/>
+            <point key="canvasLocation" x="-196" y="1020.5397301349326"/>
         </scene>
         <!--Departures-->
         <scene sceneID="rUA-hh-nC1">

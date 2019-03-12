@@ -40,16 +40,19 @@ class ArrivalsViewController: UIViewController {
     var airportCodeForURL: String = ""
     //Holds all arrival info
     var flightsArrivingData: [FlightArriving] = []
+    @IBOutlet weak var tableView: UITableView!
     
     
     
     override func viewDidLoad() {
+        tableView.dataSource = self
+        tableView.delegate = self
         super.viewDidLoad()
         //Setup Navbar
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .red
+        //navigationController?.navigationBar.tintColor = .red
         
     }
     
@@ -63,6 +66,7 @@ class ArrivalsViewController: UIViewController {
     
     //MARK: Private Instance methods
     func getArrivalData() {
+        flightsArrivingData.removeAll()
         let year = Calendar.current.component(.year, from: Date())
         let month = Calendar.current.component(.month, from: Date())
         let day = Calendar.current.component(.day, from: Date())
@@ -98,6 +102,11 @@ class ArrivalsViewController: UIViewController {
                         })
                         self.flightsArrivingData.append(tempArrivalData)
                     })
+                    //Sorting the data in asc order by arrival time
+                    self.flightsArrivingData.sort(by: {$0.arrivalTime! < $1.arrivalTime!})
+                    DispatchQueue.main.sync {
+                        self.tableView.reloadData()
+                    }
                 }catch{
                     print("Error serializing json: \(error)")
                 }
@@ -115,8 +124,41 @@ class ArrivalsViewController: UIViewController {
         return dateFormatter.string(from: dateFromString!)
     }
     
+}
+
+//MARK: UITableViewDelegate and DataSource
+extension ArrivalsViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(flightsArrivingData.count > 0){
+            return flightsArrivingData.count
+        }
+        return 1
+    }
     
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArrivalFlightInfoCell", for: indexPath) as? ArrivalFlightInfoCell else {
+            fatalError("The dequeued cell is not an instance of ArrivalFlightInfoCell")
+        }
+        if(indexPath.row == 0){
+            cell.timeLabel.text = "ARR▽"
+            cell.cityLabel.text = "FROM"
+            cell.flightNoLabel.text = "FLIGHT NO"
+            cell.terminalLabel.text = "TERMINAL"
+        }else{
+            let tempArrData = self.flightsArrivingData[indexPath.row]
+            cell.timeLabel.text = tempArrData.arrivalTime
+            cell.cityLabel.text = tempArrData.departureCityName
+            cell.flightNoLabel.text = tempArrData.flightNo
+            if((tempArrData.arrivalTerminal?.isEmpty)!){
+                cell.terminalLabel.text = "NA"
+            }else{
+                cell.terminalLabel.text = tempArrData.arrivalTerminal
+            }
+        }
+        return cell
+    }
 }

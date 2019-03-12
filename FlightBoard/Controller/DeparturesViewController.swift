@@ -40,15 +40,18 @@ class DeparturesViewController: UIViewController {
     var airportCodeForUrl: String = ""
     //Holds all departure info
     var flightsDepartingData: [FlightDeparting] = []
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
         super.viewDidLoad()
         //Setup Navbar
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .red
+        //navigationController?.navigationBar.tintColor = .red
         
     }
     
@@ -62,6 +65,7 @@ class DeparturesViewController: UIViewController {
     
     //MARK: Private Instance Methods
     func getDepartureData(){
+        flightsDepartingData.removeAll()
         let year = Calendar.current.component(.year, from: Date())
         let month = Calendar.current.component(.month, from: Date())
         let day = Calendar.current.component(.day, from: Date())
@@ -96,6 +100,11 @@ class DeparturesViewController: UIViewController {
                         })
                         self.flightsDepartingData.append(tempDepartureData)
                     })
+                    //sorting the data in asc order by departure time
+                    self.flightsDepartingData.sort(by: {$0.departureTime! < $1.departureTime!})
+                    DispatchQueue.main.sync {
+                        self.tableView.reloadData()
+                    }
                 }catch{
                     print("Error serializing json:\(error)")
                 }
@@ -114,4 +123,41 @@ class DeparturesViewController: UIViewController {
     }
     
     
+}
+
+//MARK: UITableViewDelegate and DataSource
+extension DeparturesViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(flightsDepartingData.count > 0){
+            return flightsDepartingData.count
+        }
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DepartureFlightInfoCell", for: indexPath) as? DepartureFlightInfoCell else {
+            fatalError("The dequeued cell is not an instance of DepartureFlightInfoCell")
+        }
+        if(indexPath.row == 0){
+            cell.dTimeLabel.text = "DEP△"
+            cell.dCityLabel.text = "TO"
+            cell.dFlightNoLabel.text = "FLIGHT NO"
+            cell.dTerminalLabel.text = "TERMINAL"
+        }else{
+            let tempDepData = self.flightsDepartingData[indexPath.row]
+            cell.dTimeLabel.text = tempDepData.departureTime
+            cell.dCityLabel.text = tempDepData.arrivalCityName
+            cell.dFlightNoLabel.text = tempDepData.flightNo
+            if((tempDepData.departureTerminal?.isEmpty)!){
+                cell.dTerminalLabel.text = "NA"
+            }else{
+                cell.dTerminalLabel.text = tempDepData.departureTerminal
+            }
+        }
+        return cell
+    }
 }

@@ -46,7 +46,7 @@ class AirportViewController: UIViewController, NSFetchedResultsControllerDelegat
         //navigationItem.rightBarButtonItem = editButtonItem
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .red
+        //navigationController?.navigationBar.tintColor = .red
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Airports"
@@ -138,7 +138,7 @@ extension AirportViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AirportInfoCell", for: indexPath) as? AirportInfoCell else {
-            fatalError("The dequed cell is not an instance of NewsCell")
+            fatalError("The dequeued cell is not an instance of AirportInfoCell")
         }
         let tempAirport: AirportDetail
         if self.isFiltering(){
