@@ -3,7 +3,7 @@ A simple flight board application for showing arrival and departues information 
 
 
 Airports View
-<p align="center">
+<p align="left">
   <img src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Airports%20Screen.png" width="350"/>
 </p>
 
@@ -13,6 +13,6 @@ Arrivals View
 </p>
 
 Departures View
-<p align="center">
+<p align="right">
   <img src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Departures%20Screen.png" width="350"/>
 </p>
