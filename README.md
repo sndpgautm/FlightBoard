@@ -6,7 +6,7 @@ Airports View
 <p align="center">
   <img align="left" src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Airports%20Screen.png" width="350"/>
 </p>
-<p align="center">
+<p align="right">
    Arrivals View
   <img align="center" src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Arrivals%20Screen.png" width="350"/>
    </p>
