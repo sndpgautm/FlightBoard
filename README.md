@@ -11,7 +11,7 @@ Airports, Arrivals and Departures View
  </p>
  
 <p align="center">
-  <img  align="left" src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Departures%20Screen.png" width="350"/>
+  <img  align="center" src="https://github.com/sndpgautm/FlightBoard/blob/master/ScreenShots/Departures%20Screen.png" width="350"/>
 </p>
 
 
